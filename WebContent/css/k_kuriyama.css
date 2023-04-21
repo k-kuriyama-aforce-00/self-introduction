@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+
+h1,nav{
+	top: 32px;
+    left: 64px;
+    width: 80%;
+    height: 32px;
+    z-index: 10001;
+}	
+h1.log,nav{
+	position: fixed;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    color: #fff;
+}
+
+nav{
+	z-index: 600;
+    text-align: right;
+    top: 31.5px;
+    right: 0;
+    padding-right: 64px;
+    z-index: 10000;
+}
+
+nav .humbrger-warp{
+	width: 21px;
+    height: 21px;
+    padding-top: 5px;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    display: inline;
+    vertical-align: auto;
+    cursor: pointer;
+    z-index: 100;
+}
+
+nav .humberger{
+	position: relative;
+	float: right;
+}
+nav .humberger ,nav .humberger::before ,nav .humberger::after{
+	
+	display: block;
+    width: 21px;
+    height: 2px;
+    background: #1a1919;
+    border-radius: 1px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+nav .humberger::before{
+	bottom: 8px;
+}
+nav .humberger::after{
+	top: 8px;
+}
+
+nav .humberger::before , nav .humberger::after{
+	content: "";
+	position: absolute;
+}
+
+nav ul{
+	margin-bottom: 5px;
+	display: block;
+}
+nav li{
+	list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: -32px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+nav li a{
+	display: block;
+    padding: 3px 32px 0px 32px;
+    font-size: 17px;
+    line-height: 2.2;
+    text-align: right;
+}
+nav li a span{
+	position: relative;
+    width: auto;
+    padding: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    display: inline;
+    vertical-align: auto;
+}
+nav.opend li a span{
+	float: none;
+}
+nav li a span::after{
+	-webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+    width: 0;
+    height: 2px;
+    display: block;
+    content: "";
+    background: #585757;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 5px;
+}
